@@ -1,18 +1,20 @@
 /* 基本样式 */
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: #F0F0F0; /* 背景色为浅灰色，简洁 */
+    background-color: #F0F0F0; /* 背景色为浅灰色 */
     color: #333; /* 主文本颜色 */
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* 提高行间距，提升可读性 */
 }
 
 header {
-    background-color: #000000; /* 顶部黑色背景 */
-    color: #FFFFFF; /* 白色文字 */
+    background-color: #FFFFFF; /* 白色背景 */
+    color: #000000; /* 黑色文字 */
     padding: 20px 0;
     text-align: center;
     position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影，提升质感 */
 }
 
 header h1 {
@@ -20,6 +22,7 @@ header h1 {
     margin: 0;
     font-weight: 300;
     text-transform: uppercase; /* 提升标题的现代感 */
+    color: #000000; /* 确保标题文字是黑色 */
 }
 
 .container {
@@ -29,9 +32,12 @@ header h1 {
 }
 
 .logo-container {
+    display: flex;
+    justify-content: flex-start; /* logo左对齐 */
+    align-items: center;
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
 }
 
 .logo {
@@ -43,9 +49,12 @@ header h1 {
 .calculator {
     background-color: #FFFFFF; /* 白色背景 */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
     padding: 30px;
     margin: 30px 0;
+    max-width: 600px; /* 限制最大宽度，保持简洁 */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form-container {
@@ -57,7 +66,7 @@ header h1 {
 label {
     margin: 0 0 10px;
     font-size: 1rem;
-    color: #3C3C3C; /* 深灰色标签文字 */
+    color: #3C3C3B; /* 深灰色标签文字 */
     font-weight: 500;
 }
 
@@ -82,6 +91,7 @@ button {
     transition: background-color 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px; /* 提升按钮文字的现代感 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
 }
 
 button:hover {
@@ -94,12 +104,13 @@ button:hover {
     padding: 20px;
     border-radius: 6px;
     margin-top: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 结果区域阴影 */
 }
 
 .result h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #3C3C3C; /* 结果标题文字颜色 */
+    color: #3C3C3B; /* 结果标题文字颜色 */
     font-weight: 500;
 }
 
@@ -122,6 +133,10 @@ footer {
         width: 90%;
     }
 
+    header {
+        padding: 15px 0; /* 稍微减少顶部和底部的内边距 */
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -137,5 +152,27 @@ footer {
 
     .result p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem; /* 更小的标题字体 */
+    }
+
+    .logo {
+        height: 35px; /* 更小的logo */
+    }
+
+    .calculator {
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px 14px; /* 更小的按钮，适应小屏 */
+    }
+
+    .result p {
+        font-size: 0.9rem;
     }
 }
