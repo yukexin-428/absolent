@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滤芯成本与节能计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.svg" alt="Absolent Logo" class="logo"> </Users/absolent/Downloads>
+            </div>
+            <h1>Absolent 滤芯成本与节能计算器</h1>
+        </div>
+    </header>
+    <main>
+        <div class="calculator">
+            <div class="form-container">
+                <label for="filter-lifetime">滤芯寿命 (年):</label>
+                <input type="number" id="filter-lifetime" placeholder="请输入滤芯寿命">
+                
+                <label for="power-consumption">每年耗电量 (kWh):</label>
+                <input type="number" id="power-consumption" placeholder="请输入每年耗电量">
+                
+                <label for="filter-cost">滤芯更换成本 (元):</label>
+                <input type="number" id="filter-cost" placeholder="请输入滤芯更换成本">
+                
+                <label for="electricity-rate">电价 (元/kWh):</label>
+                <input type="number" id="electricity-rate" placeholder="请输入电价">
+                
+                <button onclick="calculateCost()">计算</button>
+            </div>
+
+            <div class="result">
+                <h2>计算结果:</h2>
+                <p>年成本: <span id="annual-cost"></span> 元</p>
+                <p>节能率: <span id="energy-savings"></span> %</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2026 Absolent</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
