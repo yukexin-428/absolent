@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>滤芯成本与节能计算器</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入Chart.js -->
 </head>
 <body>
     <header>
@@ -33,6 +34,11 @@
                 <button onclick="calculateCost()">计算</button>
             </div>
 
+            <!-- 可视化图表 -->
+            <div class="chart-container">
+                <canvas id="energyChart"></canvas>
+            </div>
+
             <div class="result">
                 <h2>计算结果:</h2>
                 <p>年成本: <span id="annual-cost"></span> 元</p>
@@ -45,6 +51,8 @@
             <p>© 2026 Absolent</p>
         </div>
     </footer>
+    <!-- 引入chart.js 和 script.js -->
+    <script src="chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
